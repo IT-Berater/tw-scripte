@@ -1,4 +1,8 @@
-tw-scripte
-==========
+Scripte f√r den RaspberryPi
 
-Scripte f√ºr den Raspberry Pi
+```bash
+git clone https://github.com/andreafabrizi/Dropbox-Uploader/
+git clone https://github.com/IT-Berater/tw-scripte/
+```
+
+
