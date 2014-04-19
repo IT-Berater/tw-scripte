@@ -1,6 +1,6 @@
 Scripte für den RaspberryPi
 
-Druckläsung mit CUPS. Dokumente zu PDF. Spooler.
+Drucklösung mit CUPS. Dokumente zu PDF. Spooler. Dropbox.
 
 ```bash
 git clone https://github.com/andreafabrizi/Dropbox-Uploader/
