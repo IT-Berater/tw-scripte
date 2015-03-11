@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding=ISO-8859-1
 
-# warte.py Scrip
+# warte.py Script
 #
 # Thomas Wenzlaff (c) 2015 www.wenzlaff.info
 #
