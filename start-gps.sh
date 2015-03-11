@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Dies start-gps.hs Script soll alles starten was für das wardrive nötig ist.
+# Dies start-gps.sh Script soll alles starten was für das wardrive nötig ist.
 #
 # 14.02.15 Thomas Wenzlaff
 #
