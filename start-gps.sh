@@ -6,13 +6,14 @@
 # 14.02.15 Thomas Wenzlaff
 #
 # 1. gpsd starten
-# 2. Zeit von GPSD ermittelt und setzen
-# 3. Kismet Server starten
-# 4. Warten auf Tastendruck warten.py
-# 5. LED blinken
-# 6. Kismet sauber runterfahren
-# 7. gpsd runterfahren
-# 8. System runterfahren
+# 2. LED an und warten auf Tastendruck
+# 3. Zeit von GPSD ermittelt und setzen
+# 4. Kismet Server starten
+# 5. Warten auf Tastendruck warten.py
+# 6. LED blinken
+# 7. Kismet sauber runterfahren
+# 8. gpsd runterfahren
+# 9. System runterfahren
 #
 # (C) 2015 Thomas Wenzlaff http://www.wenzlaff.de
 #
@@ -47,6 +48,10 @@ echo 'Die Zeit von gpsd:'
 echo $UTCDATE
 echo 'Setzt die aktuelle Systemzeit des Raspberry Pi'
 /bin/date -u --set="$UTCDATE"
+
+echo 'an-warte.py starten ...'
+/root/autostart/an-warte.py
+echo 'an-warte.py beendet, weiter ...'
 
 echo 'Starte den Kismet Server im Hintergrund ...'
 kismet_server --daemonize
