@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Dies start-gps.sh Script soll alles starten was für das wardrive nötig ist.
+# Dies start-gps.hs Script soll alles starten was für das wardrive nötig ist.
 #
 # 14.02.15 Thomas Wenzlaff
 #
@@ -31,8 +31,8 @@
 #
 ##############################################################################
 echo 'Starte start-gps.sh Script ...'
-killall gpsd
-killall kismet_server
+/usr/bin/pkill gpsd
+/usr/bin/pkill kismet_server
 
 echo 'Starte gpsd Dämon im Hintergrund ...'
 /etc/init.d/gpsd start
@@ -43,9 +43,10 @@ echo 'Warte bis GPS bereit ...'
 
 echo 'Parse die aktuelle UTC Zeit von gpsd Ausgabe ...'
 UTCDATE=`/usr/bin/gpspipe -w -n 10 | grep -m 1 "TPV" | sed -r 's/.*"time":"([^"]*)".*/\1/' | sed -e 's/^\(.\{10\}\)T\(.\{8\}\).*/\1 \2/'`
-
-echo 'Setzt die aktuelle Systemzeit des Raspberry Pi mit $UTCDATE'
-date -u -s "$UTCDATE"
+echo 'Die Zeit von gpsd:'
+echo $UTCDATE
+echo 'Setzt die aktuelle Systemzeit des Raspberry Pi'
+/bin/date -u --set="$UTCDATE"
 
 echo 'Starte den Kismet Server im Hintergrund ...'
 kismet_server --daemonize
