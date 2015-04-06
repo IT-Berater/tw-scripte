@@ -14,3 +14,7 @@ Scripte für das Wardriving mit Kismet, siehe
 
 http://blog.wenzlaff.de/?p=5368
 
+
+Scripte für SNMP siehe
+
+http://blog.wenzlaff.de/?p=5476
